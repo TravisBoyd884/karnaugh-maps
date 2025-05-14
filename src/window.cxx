@@ -21,7 +21,13 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam,
     // Return 1 to indicate that the background has been erased
     return 1;
   }
-  // ... other message handling ...
+  case WM_CLOSE:
+    DestroyWindow(hwnd);
+    return 0;
+
+  case WM_DESTROY:
+    PostQuitMessage(0);
+    return 0;
   default:
     return DefWindowProc(hwnd, uMsg, wParam, lParam);
   }
