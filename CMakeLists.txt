@@ -19,7 +19,7 @@ else()
   set(CMAKE_CXX_COMPILER clang++)
 endif()
 
-add_executable(game src/main.cxx)
+add_executable(game WIN32 src/main.cxx src/window.cxx)
 target_link_libraries(${PROJECT_NAME} PRIVATE "-lstdc++exp")
 
 target_include_directories(game PRIVATE

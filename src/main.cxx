@@ -1,6 +1,8 @@
-#include <print>
+#include "window.h"
 
 int main(int argc, char *argv[]) {
-  std::println("Hello World!");
+  CoolWindow(800u, 600u);
+  for (;;) {
+  }
   return 0;
 }
